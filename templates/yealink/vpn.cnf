@@ -1,0 +1,30 @@
+##############################################
+# Sample client-side OpenVPN 2.0 config file #
+# for connecting to multi-client server.     #
+#                                            #
+# This configuration can be used by multiple #
+# clients, however each client should have   #
+# its own cert and key files.                #
+#                                            #
+# On Windows, you might want to rename this  #
+# file so it has a .ovpn extension           #
+##############################################
+
+client
+dev tun
+proto udp
+resolv-retry infinite
+nobind
+persist-key
+persist-tun
+ca /config/openvpn/keys/ca.crt
+cert /config/openvpn/keys/template108.crt
+key /config/openvpn/keys/template108.key
+ns-cert-type server
+tls-auth /config/openvpn/keys/ta.key 1
+auth-retry nointeract
+reneg-sec 0
+comp-lzo no
+verb 3
+script-security 2
+
