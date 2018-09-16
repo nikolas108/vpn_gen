@@ -5,7 +5,7 @@ client
 setenv SERVER_Poll_TIMEOUT 4
 nobind
 proto udp #Transport protocol (udp or tcp) of the VPN server
-remote 218.107.220.74 1194 #Outside IP address and port of the VPN server
+remote 127.0.0.1 1194 #Outside IP address and port of the VPN server
 dev tun #Virtual network interface (tun or tap)
 #sndbuf 100000
 #rcvbuf 100000
