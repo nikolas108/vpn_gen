@@ -1,0 +1,6 @@
+ca.key
+clients
+srv
+keys/*.key
+keys/*.csr
+keys/*.crt
